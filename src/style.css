@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply scroll-smooth bg-background transition-all;
+}
+
+
+/*
+-- Start BackGround Animation
+*/
+.area {
+    @apply fixed inset-0 z-0;
+}
+
+.circles {
+    @apply absolute inset-0 overflow-hidden;
+}
+
+.circles li {
+    @apply absolute block w-20 h-20;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -160px;
+}
+
+.circles li:nth-child(1) {
+    @apply left-1/4 w-20 h-20 bg-blue-400/20;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    @apply w-20 h-20 bg-amber-300/20;
+    left: 10%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    @apply w-5 h-5 bg-green-400/20;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    @apply w-16 h-16 bg-red-400/20;
+    left: 40%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    @apply w-12 h-12 bg-indigo-400/20;
+    left: 65%;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    @apply w-32 h-32 bg-purple-400/20;
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    @apply w-40 h-40 bg-pink-400/20;
+    left: 35%;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    @apply w-6 h-6 bg-teal-400/20;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    @apply w-4 h-4 bg-yellow-400/20;
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    @apply w-40 h-40 bg-blue-400/20;
+    left: 85%;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.circles li:nth-child(11) {
+    @apply w-40 h-40 bg-yellow-600/20;
+    left: 45%;
+    animation-delay: 27s;
+}
+
+.circles li:nth-child(12) {
+    @apply w-10 h-10 bg-red-600/20;
+    left: 15%;
+    animation-delay: 20s;
+}
+
+.circles li:nth-child(13) {
+    @apply w-20 h-20 bg-green-500/20;
+    left: 95%;
+    animation-delay: 15s;
+}
+
+.circles li:nth-child(14) {
+    @apply w-16 h-16 bg-fuchsia-500/20;
+    left: 80%;
+    animation-delay: 37s;
+}
+
+.circles li:nth-child(15) {
+    @apply w-4 h-4 bg-sky-400/20;
+    left: 65%;
+    animation-delay: 31s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 4px;
+    }
+
+    100% {
+        transform: translateY(-1500px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+/*
+-- End BackGround Animation
+*/
