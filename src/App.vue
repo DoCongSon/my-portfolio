@@ -9,7 +9,7 @@ import IconMail from './assets/images/icon-mail.svg';
 import IconFaceBook from './assets/images/icon-facebook.svg';
 import IconInstagram from './assets/images/icon-instagram.svg';
 import IconGithub from './assets/images/github.svg';
-import cv from './assets/CV_DoCongSon_Frontend.pdf';
+import cv from './assets/DoCongSon_CV.pdf';
 import { expentsiveLists, projectLists, workLists } from "./constants";
 
 const langCode = ref<'vn' | 'en'>('en');
@@ -56,21 +56,21 @@ watch(langCode, () => {
       </div>
       <div id="projects" class="flex items-center flex-col gap-10">
         <h1 class="text-[35px] text-primaryText font-extrabold tracking-[2.4px] uppercase bg-gradient-to-b from-[#FF8660] to-[#D5491D] bg-clip-text text-transparent">
-          {{ langCode === 'vn' ? 'Dự án' : 'Projects' }}
+          {{ langCode === 'vn' ? 'Dự án cá nhân' : 'personal project' }}
         </h1>
-        <div class="flex gap-7 flex-wrap justify-center">
-          <div class="w-[320px] bg-gray-800/80 rounded-2xl overflow-hidden" v-for="item in projectLists">
-            <div class="w-full h-[240px]">
+        <div class="flex gap-5 flex-wrap justify-center">
+          <div class="w-[250px] bg-gray-800/80 rounded-2xl overflow-hidden" v-for="item in projectLists">
+            <div class="w-full h-[200px]">
               <img class="w-full h-full object-cover" :src="item.thumbnail" alt="">
             </div>
-            <a class="px-6 py-3 flex items-center justify-between w-full" :href="item.link">
+            <a class="p-3 flex items-center justify-between w-full" :href="item.link">
               <div>
                 <p class="text-xs font-bold uppercase text-primaryText">{{
                     langCode === 'vn' ? 'click vào đây để xem' : 'Click here to visit'
                   }}</p>
-                <h3 class="text-lg font-bold uppercase text-white truncate">{{ item.name }}</h3>
+                <h3 class="text-base font-bold uppercase text-white truncate">{{ item.name }}</h3>
               </div>
-              <div class="w-8 h-8">
+              <div class="size-6">
                 <img class="w-full h-full object-contain" :src="IconArrow" alt="">
               </div>
             </a>
